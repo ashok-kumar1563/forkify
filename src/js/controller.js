@@ -74,12 +74,16 @@ const controlAddRecipe = async function (data) {
     addRecipeView.renderError(error.message);
   }
 };
+const newFeature = function () {
+  console.log('New feature added');
+};
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandler(controlSerachResult);
   paginationView.addHandlerclick(controlPagination);
   recipeView.addHandlerServings(controlServings);
   addRecipeView.addRecipeHandler(controlAddRecipe);
+  newFeature();
 };
 init();
 //window.addEventListener('hashchange', showRecipe);
